@@ -5,7 +5,6 @@ RUN apk update && \
     curl -L "https://github.com/peterzhenhh-2/goproxy/archive/server.php-go.tar.gz" | gzip -d | tar xv && \
     cd goproxy-server.php-go && \
     env CGO_ENABLED=0 \
-    go env -w GO111MODULE=off
     go build -v -ldflags="-s -w" -o /goproxy-php
 
 FROM alpine
