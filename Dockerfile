@@ -1,5 +1,5 @@
 # see https://hub.docker.com/r/phuslu/goproxy-php/
-FROM golang
+FROM golang:alpine
 RUN apk update && \
     apk add curl && \
     curl -L "https://github.com/peterzhenhh-2/goproxy/archive/server.php-go.tar.gz" | gzip -d | tar xv && \
